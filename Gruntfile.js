@@ -492,7 +492,7 @@ module.exports = function (grunt) {
   grunt.registerTask('validate-html', ['jekyll', 'validation']);
 
   // Test task.
-  var testSubtasks = ['dist-css', 'jshint', 'jscs', 'qunit', 'validate-html'];
+  var testSubtasks = ['dist-css', 'jshint', 'jscs', 'qunit', 'build-customizer-vars-form', 'validate-html'];
   // Only run Sauce Labs tests if there's a Sauce access key
   if (typeof process.env.SAUCE_ACCESS_KEY !== 'undefined') {
     testSubtasks.push('connect');

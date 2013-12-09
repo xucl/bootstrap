@@ -6,8 +6,9 @@ each section in sections
     div.row
       each variable in section.variables
         div.bs-customizer-input
-          label= variable.name
+          label(for="input-" + variable.name)= variable.name
           input.form-control(
+            id="input-" + variable.name
             type="text"
             value=variable.defaultValue
             data-var=variable.name)

@@ -220,7 +220,7 @@ module.exports = function (grunt) {
             }
             Tokenizer.prototype.unshift = function (token) {
               if (this._next !== undefined) {
-                throw new Error("Attempted to unshift twice!");
+                throw new Error('Attempted to unshift twice!');
               }
               this._next = token;
             };
@@ -253,7 +253,7 @@ module.exports = function (grunt) {
               if (match !== null) {
                 return new VarDocstring(match[1]);
               }
-              var commentStart = line.lastIndexOf("//");
+              var commentStart = line.lastIndexOf('//');
               var varLine = (commentStart === -1) ? line : line.slice(0, commentStart);
               match = this.VAR_ASSIGNMENT.exec(varLine);
               if (match !== null) {
@@ -278,7 +278,7 @@ module.exports = function (grunt) {
                 var section = this.parseSection();
                 if (section === null) {
                   if (tokenizer.shift() !== null) {
-                    throw new Error("Unexpected unparsed section of file remains!");
+                    throw new Error('Unexpected unparsed section of file remains!');
                   }
                   return sections;
                 }
@@ -291,7 +291,7 @@ module.exports = function (grunt) {
                 return null;
               }
               if (!(section instanceof Section)) {
-                throw new Error("Expected section heading; got: " + JSON.stringify(section));
+                throw new Error('Expected section heading; got: ' + JSON.stringify(section));
               }
               var docstring = tokenizer.shift();
               if (docstring instanceof SectionDocstring) {

@@ -52,7 +52,7 @@
   <input type="text" placeholder="Georgia, &quot;Times New Roman&quot;, Times, serif" data-var="@font-family-serif" class="form-control"/>
   <p class="help-block">Default serif fonts.</p>
   <label>@font-family-monospace</label>
-  <input type="text" placeholder="Monaco, Menlo, Consolas, &quot;Courier New&quot;, monospace" data-var="@font-family-monospace" class="form-control"/>
+  <input type="text" placeholder="Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace" data-var="@font-family-monospace" class="form-control"/>
   <p class="help-block">Default monospace fonts for <code>&lt;code&gt;</code> and <code>&lt;pre&gt;</code>.</p>
   <label>@font-family-base</label>
   <input type="text" placeholder="@font-family-sans-serif" data-var="@font-family-base" class="form-control"/>
@@ -79,7 +79,7 @@
   <label>@line-height-computed</label>
   <input type="text" placeholder="floor(@font-size-base * @line-height-base)" data-var="@line-height-computed" class="form-control"/>
   <label>@headings-font-family</label>
-  <input type="text" placeholder="@font-family-base" data-var="@headings-font-family" class="form-control"/>
+  <input type="text" placeholder="inherit" data-var="@headings-font-family" class="form-control"/>
   <label>@headings-font-weight</label>
   <input type="text" placeholder="500" data-var="@headings-font-weight" class="form-control"/>
   <label>@headings-line-height</label>
@@ -102,6 +102,10 @@
   <input type="text" placeholder="5px" data-var="@padding-small-vertical" class="form-control"/>
   <label>@padding-small-horizontal</label>
   <input type="text" placeholder="10px" data-var="@padding-small-horizontal" class="form-control"/>
+  <label>@padding-xs-vertical</label>
+  <input type="text" placeholder="1px" data-var="@padding-xs-vertical" class="form-control"/>
+  <label>@padding-xs-horizontal</label>
+  <input type="text" placeholder="5px" data-var="@padding-xs-horizontal" class="form-control"/>
   <label>@line-height-large</label>
   <input type="text" placeholder="1.33" data-var="@line-height-large" class="form-control"/>
   <label>@line-height-small</label>
@@ -217,7 +221,7 @@
   <input type="text" placeholder="(@line-height-computed + (@padding-base-vertical * 2) + 2)" data-var="@input-height-base" class="form-control"/>
   <p class="help-block">Default <code>.form-control</code> height</p>
   <label>@input-height-large</label>
-  <input type="text" placeholder="(floor(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2)" data-var="@input-height-large" class="form-control"/>
+  <input type="text" placeholder="(ceil(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2)" data-var="@input-height-large" class="form-control"/>
   <p class="help-block">Large <code>.form-control</code> height</p>
   <label>@input-height-small</label>
   <input type="text" placeholder="(floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2)" data-var="@input-height-small" class="form-control"/>
@@ -268,9 +272,6 @@
   <label>@dropdown-header-color</label>
   <input type="text" placeholder="@gray-light" data-var="@dropdown-header-color" class="form-control"/>
   <p class="help-block">Text color for headers within dropdown menus</p>
-  <label>@dropdown-caret-color</label>
-  <input type="text" placeholder="#000" data-var="@dropdown-caret-color" class="form-control"/>
-  <p class="help-block">Indicator arrow for showing an element has a dropdown</p>
 </div>
 <h2 id="media-queries-breakpoints">Media queries breakpoints</h2>
 <p>Define the breakpoints at which your layout will change, adapting to different screen sizes.</p>
@@ -317,7 +318,10 @@
   <p class="help-block">Padding between columns.</p>
   <label>@grid-float-breakpoint</label>
   <input type="text" placeholder="@screen-sm-min" data-var="@grid-float-breakpoint" class="form-control"/>
-  <p class="help-block">Point at which the navbar stops collapsing.</p>
+  <p class="help-block">Point at which the navbar becomes uncollapsed</p>
+  <label>@grid-float-breakpoint-max</label>
+  <input type="text" placeholder="(@grid-float-breakpoint - 1)" data-var="@grid-float-breakpoint-max" class="form-control"/>
+  <p class="help-block">Point at which the navbar begins collapsing</p>
 </div>
 <h2 id="navbar">Navbar</h2>
 <div class="row">
@@ -360,7 +364,7 @@
   <label>@navbar-default-toggle-hover-bg</label>
   <input type="text" placeholder="#ddd" data-var="@navbar-default-toggle-hover-bg" class="form-control"/>
   <label>@navbar-default-toggle-icon-bar-bg</label>
-  <input type="text" placeholder="#ccc" data-var="@navbar-default-toggle-icon-bar-bg" class="form-control"/>
+  <input type="text" placeholder="#888" data-var="@navbar-default-toggle-icon-bar-bg" class="form-control"/>
   <label>@navbar-default-toggle-border-color</label>
   <input type="text" placeholder="#ddd" data-var="@navbar-default-toggle-border-color" class="form-control"/>
   <label>@navbar-inverse-color</label>
@@ -408,8 +412,6 @@
   <input type="text" placeholder="@gray-light" data-var="@nav-disabled-link-hover-color" class="form-control"/>
   <label>@nav-open-link-hover-color</label>
   <input type="text" placeholder="#fff" data-var="@nav-open-link-hover-color" class="form-control"/>
-  <label>@nav-open-caret-border-color</label>
-  <input type="text" placeholder="#fff" data-var="@nav-open-caret-border-color" class="form-control"/>
 </div>
 <h2 id="tabs">Tabs</h2>
 <div class="row">
@@ -484,25 +486,25 @@
 <p>Define colors for form feedback states and, by default, alerts.</p>
 <div class="row">
   <label>@state-success-text</label>
-  <input type="text" placeholder="#468847" data-var="@state-success-text" class="form-control"/>
+  <input type="text" placeholder="#3c763d" data-var="@state-success-text" class="form-control"/>
   <label>@state-success-bg</label>
   <input type="text" placeholder="#dff0d8" data-var="@state-success-bg" class="form-control"/>
   <label>@state-success-border</label>
   <input type="text" placeholder="darken(spin(@state-success-bg, -10), 5%)" data-var="@state-success-border" class="form-control"/>
   <label>@state-info-text</label>
-  <input type="text" placeholder="#3a87ad" data-var="@state-info-text" class="form-control"/>
+  <input type="text" placeholder="#31708f" data-var="@state-info-text" class="form-control"/>
   <label>@state-info-bg</label>
   <input type="text" placeholder="#d9edf7" data-var="@state-info-bg" class="form-control"/>
   <label>@state-info-border</label>
   <input type="text" placeholder="darken(spin(@state-info-bg, -10), 7%)" data-var="@state-info-border" class="form-control"/>
   <label>@state-warning-text</label>
-  <input type="text" placeholder="#c09853" data-var="@state-warning-text" class="form-control"/>
+  <input type="text" placeholder="#8a6d3b" data-var="@state-warning-text" class="form-control"/>
   <label>@state-warning-bg</label>
   <input type="text" placeholder="#fcf8e3" data-var="@state-warning-bg" class="form-control"/>
   <label>@state-warning-border</label>
   <input type="text" placeholder="darken(spin(@state-warning-bg, -10), 5%)" data-var="@state-warning-border" class="form-control"/>
   <label>@state-danger-text</label>
-  <input type="text" placeholder="#b94a48" data-var="@state-danger-text" class="form-control"/>
+  <input type="text" placeholder="#a94442" data-var="@state-danger-text" class="form-control"/>
   <label>@state-danger-bg</label>
   <input type="text" placeholder="#f2dede" data-var="@state-danger-bg" class="form-control"/>
   <label>@state-danger-border</label>
@@ -845,6 +847,10 @@
   <input type="text" placeholder="#c7254e" data-var="@code-color" class="form-control"/>
   <label>@code-bg</label>
   <input type="text" placeholder="#f9f2f4" data-var="@code-bg" class="form-control"/>
+  <label>@kbd-color</label>
+  <input type="text" placeholder="#fff" data-var="@kbd-color" class="form-control"/>
+  <label>@kbd-bg</label>
+  <input type="text" placeholder="#333" data-var="@kbd-bg" class="form-control"/>
   <label>@pre-bg</label>
   <input type="text" placeholder="#f5f5f5" data-var="@pre-bg" class="form-control"/>
   <label>@pre-color</label>

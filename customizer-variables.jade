@@ -8,7 +8,7 @@ each section in sections
         label= variable.name
         input.form-control(
           type="text"
-          placeholder=variable.defaultValue
+          value=variable.defaultValue
           data-var=variable.name)
         if variable.docstring
           p.help-block!= variable.docstring.html

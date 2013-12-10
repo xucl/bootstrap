@@ -1,5 +1,6 @@
 
-<h2 id="grays">Grays</h2>
+<h2 id="colors">Colors</h2>
+<p>Gray and brand colors for use across Bootstrap.</p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@gray-darker">@gray-darker</label>
@@ -21,9 +22,6 @@
     <label for="input-@gray-lighter">@gray-lighter</label>
     <input id="input-@gray-lighter" type="text" value="lighten(#000, 93.5%)" data-var="@gray-lighter" class="form-control"/>
   </div>
-</div>
-<h2 id="brand-colors">Brand colors</h2>
-<div class="row">
   <div class="bs-customizer-input">
     <label for="input-@brand-primary">@brand-primary</label>
     <input id="input-@brand-primary" type="text" value="#428bca" data-var="@brand-primary" class="form-control"/>
@@ -57,36 +55,32 @@
     <input id="input-@text-color" type="text" value="@gray-dark" data-var="@text-color" class="form-control"/>
     <p class="help-block">Global text color on <code>&lt;body&gt;</code>.</p>
   </div>
-</div>
-<h2 id="links">Links</h2>
-<div class="row">
   <div class="bs-customizer-input">
     <label for="input-@link-color">@link-color</label>
     <input id="input-@link-color" type="text" value="@brand-primary" data-var="@link-color" class="form-control"/>
-    <p class="help-block">Global textual link color</p>
+    <p class="help-block">Global textual link color.</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@link-hover-color">@link-hover-color</label>
     <input id="input-@link-hover-color" type="text" value="darken(@link-color, 15%)" data-var="@link-hover-color" class="form-control"/>
-    <p class="help-block">Link hover color set via <code>darken()</code> function</p>
+    <p class="help-block">Link hover color set via <code>darken()</code> function.</p>
   </div>
 </div>
 <h2 id="typography">Typography</h2>
+<p>Font, line-height, and color for body text, headings, and more.</p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@font-family-sans-serif">@font-family-sans-serif</label>
     <input id="input-@font-family-sans-serif" type="text" value="&quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif" data-var="@font-family-sans-serif" class="form-control"/>
-    <p class="help-block">Default sans-serif fonts.</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@font-family-serif">@font-family-serif</label>
     <input id="input-@font-family-serif" type="text" value="Georgia, &quot;Times New Roman&quot;, Times, serif" data-var="@font-family-serif" class="form-control"/>
-    <p class="help-block">Default serif fonts.</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@font-family-monospace">@font-family-monospace</label>
     <input id="input-@font-family-monospace" type="text" value="Menlo, Monaco, Consolas, &quot;Courier New&quot;, monospace" data-var="@font-family-monospace" class="form-control"/>
-    <p class="help-block">Default monospace fonts for <code>&lt;code&gt;</code> and <code>&lt;pre&gt;</code>.</p>
+    <p class="help-block">Default monospace fonts for <code>&lt;code&gt;</code>, <code>&lt;kbd&gt;</code>, and <code>&lt;pre&gt;</code>.</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@font-family-base">@font-family-base</label>
@@ -131,14 +125,17 @@
   <div class="bs-customizer-input">
     <label for="input-@line-height-base">@line-height-base</label>
     <input id="input-@line-height-base" type="text" value="1.428571429" data-var="@line-height-base" class="form-control"/>
+    <p class="help-block">Unit-less <code>line-height</code> for use in components like buttons.</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@line-height-computed">@line-height-computed</label>
     <input id="input-@line-height-computed" type="text" value="floor(@font-size-base * @line-height-base)" data-var="@line-height-computed" class="form-control"/>
+    <p class="help-block">Computed &quot;line-height&quot; (<code>font-size</code> &amp;times; <code>line-height</code>) for use with <code>margin</code>, <code>padding</code>, etc.</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@headings-font-family">@headings-font-family</label>
     <input id="input-@headings-font-family" type="text" value="inherit" data-var="@headings-font-family" class="form-control"/>
+    <p class="help-block">By default, this inherits from the <code>&lt;body&gt;</code>.</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@headings-font-weight">@headings-font-weight</label>
@@ -154,7 +151,7 @@
   </div>
 </div>
 <h2 id="components">Components</h2>
-<p>Define common padding and border radius sizes and more.</p>
+<p>Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).</p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@padding-base-vertical">@padding-base-vertical</label>
@@ -211,33 +208,36 @@
   <div class="bs-customizer-input">
     <label for="input-@component-active-color">@component-active-color</label>
     <input id="input-@component-active-color" type="text" value="#fff" data-var="@component-active-color" class="form-control"/>
-    <p class="help-block">Global color for active items (e.g., navs or dropdowns)</p>
+    <p class="help-block">Global color for active items (e.g., navs or dropdowns).</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@component-active-bg">@component-active-bg</label>
     <input id="input-@component-active-bg" type="text" value="@brand-primary" data-var="@component-active-bg" class="form-control"/>
-    <p class="help-block">Global background color for active items (e.g., navs or dropdowns)</p>
+    <p class="help-block">Global background color for active items (e.g., navs or dropdowns).</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@caret-width-base">@caret-width-base</label>
     <input id="input-@caret-width-base" type="text" value="4px" data-var="@caret-width-base" class="form-control"/>
+    <p class="help-block">Width of the <code>border</code> for generating carets that indicator dropdowns.</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@caret-width-large">@caret-width-large</label>
     <input id="input-@caret-width-large" type="text" value="5px" data-var="@caret-width-large" class="form-control"/>
+    <p class="help-block">Carets increase slightly in size for larger components.</p>
   </div>
 </div>
 <h2 id="tables">Tables</h2>
+<p>Customizes the <code>.table</code> component with basic values, each used across all table variations.</p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@table-cell-padding">@table-cell-padding</label>
     <input id="input-@table-cell-padding" type="text" value="8px" data-var="@table-cell-padding" class="form-control"/>
-    <p class="help-block">Default padding for <code>&lt;th&gt;</code>s and <code>&lt;td&gt;</code>s</p>
+    <p class="help-block">Padding for <code>&lt;th&gt;</code>s and <code>&lt;td&gt;</code>s.</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@table-condensed-cell-padding">@table-condensed-cell-padding</label>
     <input id="input-@table-condensed-cell-padding" type="text" value="5px" data-var="@table-condensed-cell-padding" class="form-control"/>
-    <p class="help-block">Default padding for cells in <code>.table-condensed</code>.</p>
+    <p class="help-block">Padding for cells in <code>.table-condensed</code>.</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@table-bg">@table-bg</label>
@@ -349,6 +349,7 @@
   </div>
 </div>
 <h2 id="forms">Forms</h2>
+<p></p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@input-bg">@input-bg</label>
@@ -420,61 +421,62 @@
   </div>
 </div>
 <h2 id="dropdowns">Dropdowns</h2>
+<p>Dropdown menu container and contents.</p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@dropdown-bg">@dropdown-bg</label>
     <input id="input-@dropdown-bg" type="text" value="#fff" data-var="@dropdown-bg" class="form-control"/>
-    <p class="help-block">Dropdown menu background color</p>
+    <p class="help-block">Background for the dropdown menu.</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@dropdown-border">@dropdown-border</label>
     <input id="input-@dropdown-border" type="text" value="rgba(0,0,0,.15)" data-var="@dropdown-border" class="form-control"/>
-    <p class="help-block">Dropdown menu border color</p>
+    <p class="help-block">Dropdown menu <code>border-color</code>.</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@dropdown-fallback-border">@dropdown-fallback-border</label>
     <input id="input-@dropdown-fallback-border" type="text" value="#ccc" data-var="@dropdown-fallback-border" class="form-control"/>
-    <p class="help-block">Dropdown menu border color &lt;strong&gt;for IE8&lt;/strong&gt;</p>
+    <p class="help-block">Dropdown menu <code>border-color</code> <strong>for IE8</strong>.</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@dropdown-divider-bg">@dropdown-divider-bg</label>
     <input id="input-@dropdown-divider-bg" type="text" value="#e5e5e5" data-var="@dropdown-divider-bg" class="form-control"/>
-    <p class="help-block">Dropdown divider top border color</p>
+    <p class="help-block">Divider color for between dropdown items.</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@dropdown-link-color">@dropdown-link-color</label>
     <input id="input-@dropdown-link-color" type="text" value="@gray-dark" data-var="@dropdown-link-color" class="form-control"/>
-    <p class="help-block">Dropdown text color</p>
+    <p class="help-block">Dropdown link text color.</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@dropdown-link-hover-color">@dropdown-link-hover-color</label>
     <input id="input-@dropdown-link-hover-color" type="text" value="darken(@gray-dark, 5%)" data-var="@dropdown-link-hover-color" class="form-control"/>
-    <p class="help-block">Hovered dropdown menu entry text color</p>
+    <p class="help-block">Hover color for dropdown links.</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@dropdown-link-hover-bg">@dropdown-link-hover-bg</label>
     <input id="input-@dropdown-link-hover-bg" type="text" value="#f5f5f5" data-var="@dropdown-link-hover-bg" class="form-control"/>
-    <p class="help-block">Hovered dropdown menu entry text color</p>
+    <p class="help-block">Hover background for dropdown links.</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@dropdown-link-active-color">@dropdown-link-active-color</label>
     <input id="input-@dropdown-link-active-color" type="text" value="@component-active-color" data-var="@dropdown-link-active-color" class="form-control"/>
-    <p class="help-block">Active dropdown menu entry text color</p>
+    <p class="help-block">Active dropdown menu item text color.</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@dropdown-link-active-bg">@dropdown-link-active-bg</label>
     <input id="input-@dropdown-link-active-bg" type="text" value="@component-active-bg" data-var="@dropdown-link-active-bg" class="form-control"/>
-    <p class="help-block">Active dropdown menu entry background color</p>
+    <p class="help-block">Active dropdown menu item background color.</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@dropdown-link-disabled-color">@dropdown-link-disabled-color</label>
     <input id="input-@dropdown-link-disabled-color" type="text" value="@gray-light" data-var="@dropdown-link-disabled-color" class="form-control"/>
-    <p class="help-block">Disabled dropdown menu entry background color</p>
+    <p class="help-block">Disabled dropdown menu item background color.</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@dropdown-header-color">@dropdown-header-color</label>
     <input id="input-@dropdown-header-color" type="text" value="@gray-light" data-var="@dropdown-header-color" class="form-control"/>
-    <p class="help-block">Text color for headers within dropdown menus</p>
+    <p class="help-block">Text color for headers within dropdown menus.</p>
   </div>
 </div>
 <h2 id="media-queries-breakpoints">Media queries breakpoints</h2>
@@ -552,20 +554,21 @@
   <div class="bs-customizer-input">
     <label for="input-@grid-gutter-width">@grid-gutter-width</label>
     <input id="input-@grid-gutter-width" type="text" value="30px" data-var="@grid-gutter-width" class="form-control"/>
-    <p class="help-block">Padding between columns.</p>
+    <p class="help-block">Padding between columns. Gets divided in half for the left and right.</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@grid-float-breakpoint">@grid-float-breakpoint</label>
     <input id="input-@grid-float-breakpoint" type="text" value="@screen-sm-min" data-var="@grid-float-breakpoint" class="form-control"/>
-    <p class="help-block">Point at which the navbar becomes uncollapsed</p>
+    <p class="help-block">Point at which the navbar becomes uncollapsed.</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@grid-float-breakpoint-max">@grid-float-breakpoint-max</label>
     <input id="input-@grid-float-breakpoint-max" type="text" value="(@grid-float-breakpoint - 1)" data-var="@grid-float-breakpoint-max" class="form-control"/>
-    <p class="help-block">Point at which the navbar begins collapsing</p>
+    <p class="help-block">Point at which the navbar begins collapsing.</p>
   </div>
 </div>
 <h2 id="navbar">Navbar</h2>
+<p></p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@navbar-height">@navbar-height</label>
@@ -717,6 +720,10 @@
   </div>
 </div>
 <h2 id="navs">Navs</h2>
+<p></p>
+<div class="row">
+</div>
+<h2 id="shared-nav-styles">Shared nav styles</h2>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@nav-link-padding">@nav-link-padding</label>
@@ -786,52 +793,47 @@
   </div>
 </div>
 <h2 id="pagination">Pagination</h2>
+<p></p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@pagination-bg">@pagination-bg</label>
     <input id="input-@pagination-bg" type="text" value="#fff" data-var="@pagination-bg" class="form-control"/>
-    <p class="help-block">Background color</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@pagination-border">@pagination-border</label>
     <input id="input-@pagination-border" type="text" value="#ddd" data-var="@pagination-border" class="form-control"/>
-    <p class="help-block">Border color</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@pagination-hover-bg">@pagination-hover-bg</label>
     <input id="input-@pagination-hover-bg" type="text" value="@gray-lighter" data-var="@pagination-hover-bg" class="form-control"/>
-    <p class="help-block">Background hover color</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@pagination-active-bg">@pagination-active-bg</label>
     <input id="input-@pagination-active-bg" type="text" value="@brand-primary" data-var="@pagination-active-bg" class="form-control"/>
-    <p class="help-block">Active background color</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@pagination-active-color">@pagination-active-color</label>
     <input id="input-@pagination-active-color" type="text" value="#fff" data-var="@pagination-active-color" class="form-control"/>
-    <p class="help-block">Active text color</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@pagination-disabled-color">@pagination-disabled-color</label>
     <input id="input-@pagination-disabled-color" type="text" value="@gray-light" data-var="@pagination-disabled-color" class="form-control"/>
-    <p class="help-block">Disabled text color</p>
   </div>
 </div>
 <h2 id="pager">Pager</h2>
+<p></p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@pager-border-radius">@pager-border-radius</label>
     <input id="input-@pager-border-radius" type="text" value="15px" data-var="@pager-border-radius" class="form-control"/>
-    <p class="help-block">Pager border radius</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@pager-disabled-color">@pager-disabled-color</label>
     <input id="input-@pager-disabled-color" type="text" value="@gray-light" data-var="@pager-disabled-color" class="form-control"/>
-    <p class="help-block">Pager disabled state color</p>
   </div>
 </div>
 <h2 id="jumbotron">Jumbotron</h2>
+<p></p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@jumbotron-padding">@jumbotron-padding</label>
@@ -907,6 +909,7 @@
   </div>
 </div>
 <h2 id="tooltips">Tooltips</h2>
+<p></p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@tooltip-max-width">@tooltip-max-width</label>
@@ -935,6 +938,7 @@
   </div>
 </div>
 <h2 id="popovers">Popovers</h2>
+<p></p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@popover-bg">@popover-bg</label>
@@ -988,6 +992,7 @@
   </div>
 </div>
 <h2 id="labels">Labels</h2>
+<p></p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@label-default-bg">@label-default-bg</label>
@@ -1031,6 +1036,7 @@
   </div>
 </div>
 <h2 id="modals">Modals</h2>
+<p></p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@modal-inner-padding">@modal-inner-padding</label>
@@ -1143,6 +1149,7 @@
   </div>
 </div>
 <h2 id="progress-bars">Progress bars</h2>
+<p></p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@progress-bg">@progress-bg</label>
@@ -1181,6 +1188,7 @@
   </div>
 </div>
 <h2 id="list-group">List group</h2>
+<p></p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@list-group-bg">@list-group-bg</label>
@@ -1227,6 +1235,7 @@
   </div>
 </div>
 <h2 id="panels">Panels</h2>
+<p></p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@panel-bg">@panel-bg</label>
@@ -1319,6 +1328,7 @@
   </div>
 </div>
 <h2 id="thumbnails">Thumbnails</h2>
+<p></p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@thumbnail-padding">@thumbnail-padding</label>
@@ -1352,6 +1362,7 @@
   </div>
 </div>
 <h2 id="wells">Wells</h2>
+<p></p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@well-bg">@well-bg</label>
@@ -1359,6 +1370,7 @@
   </div>
 </div>
 <h2 id="badges">Badges</h2>
+<p></p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@badge-color">@badge-color</label>
@@ -1393,6 +1405,7 @@
   </div>
 </div>
 <h2 id="breadcrumbs">Breadcrumbs</h2>
+<p></p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@breadcrumb-bg">@breadcrumb-bg</label>
@@ -1416,6 +1429,7 @@
   </div>
 </div>
 <h2 id="carousel">Carousel</h2>
+<p></p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@carousel-text-shadow">@carousel-text-shadow</label>
@@ -1451,6 +1465,7 @@
   </div>
 </div>
 <h2 id="close">Close</h2>
+<p></p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@close-font-weight">@close-font-weight</label>
@@ -1466,6 +1481,7 @@
   </div>
 </div>
 <h2 id="code">Code</h2>
+<p></p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@code-color">@code-color</label>
@@ -1501,6 +1517,7 @@
   </div>
 </div>
 <h2 id="type">Type</h2>
+<p></p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@text-muted">@text-muted</label>
@@ -1534,16 +1551,17 @@
   </div>
 </div>
 <h2 id="miscellaneous">Miscellaneous</h2>
+<p></p>
 <div class="row">
   <div class="bs-customizer-input">
     <label for="input-@hr-border">@hr-border</label>
     <input id="input-@hr-border" type="text" value="@gray-lighter" data-var="@hr-border" class="form-control"/>
-    <p class="help-block">Horizontal line color</p>
+    <p class="help-block">Horizontal line color.</p>
   </div>
   <div class="bs-customizer-input">
     <label for="input-@component-offset-horizontal">@component-offset-horizontal</label>
     <input id="input-@component-offset-horizontal" type="text" value="180px" data-var="@component-offset-horizontal" class="form-control"/>
-    <p class="help-block">Horizontal offset for forms and lists</p>
+    <p class="help-block">Horizontal offset for forms and lists.</p>
   </div>
 </div>
 <h2 id="container-sizes">Container sizes</h2>
